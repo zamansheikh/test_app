@@ -10,7 +10,7 @@ class CalendarCell extends StatelessWidget {
   final TextStyle? textStyle; // Custom text style for the day number
 
   const CalendarCell({
-    Key? key,
+    super.key,
     this.dayNumber,
     this.topLeftColor,
     this.bottomRightColor,
@@ -18,7 +18,7 @@ class CalendarCell extends StatelessWidget {
     this.borderColor,
     this.showBorder = false,
     this.textStyle,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,7 @@ class CalendarCell extends StatelessWidget {
       height: 50,
       decoration: BoxDecoration(
         color: backgroundColor,
+        borderRadius: BorderRadius.circular(5),
         border: showBorder
             ? Border.all(color: borderColor ?? Colors.black, width: 1)
             : null,

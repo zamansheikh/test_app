@@ -62,6 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             CalendarCell(
               dayNumber: 16,
+              showBorder: true,
               topLeftColor: Colors.pink,
               bottomRightColor: Colors.grey,
             ),
